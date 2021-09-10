@@ -1,7 +1,10 @@
 #include <SFML/Graphics.hpp>
 
+#include "Network.h"
+
 int main()
 {
+    Network<10, 100, 3, 2> net;
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
