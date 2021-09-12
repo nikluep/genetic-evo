@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include "Matrix.h"
+#include "random.h"
 
 template<std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN>
 class Network
@@ -30,19 +31,16 @@ private:
 	Matrix<float, SIZE_HIDDEN, SIZE_IN> m_inputLayer;
 	std::vector< Matrix<float, SIZE_HIDDEN, SIZE_HIDDEN>> m_hiddenLayers;
 	Matrix<float, SIZE_OUT, SIZE_HIDDEN> m_outputLayer;
-
-	//TODO: replace with proper RNG
-	static float defaultInit() { return 1.1f; };
 };
 
 
 template<std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN>
 inline Network<SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN>::Network()
-	: m_inputLayer(defaultInit), m_hiddenLayers(), m_outputLayer(defaultInit)
+	: m_inputLayer(getRandomFloat), m_hiddenLayers(), m_outputLayer(getRandomFloat)
 {
 	m_hiddenLayers.reserve(NUM_HIDDEN);
 	for (std::size_t i{}; i < NUM_HIDDEN; ++i) {
-		m_hiddenLayers.emplace_back(defaultInit);
+		m_hiddenLayers.emplace_back(getRandomFloat);
 	}
 }
 
