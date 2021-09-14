@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Genetic Drone Evolution: Network&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt; Class Template Reference</title>
+<title>Genetic Evolution: Network&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Genetic Drone Evolution
+   <div id="projectname">Genetic Evolution
    </div>
   </td>
  </tr>
@@ -68,16 +68,132 @@ $(function() {
   <div class="headertitle"><div class="title">Network&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_network_8h_source.html">Network.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afe73178ed7ab6f21426a93eb7052f75f"><td class="memItemLeft" align="right" valign="top"><a id="afe73178ed7ab6f21426a93eb7052f75f" name="afe73178ed7ab6f21426a93eb7052f75f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (const std::vector&lt; float &gt; &amp;input, std::vector&lt; float &gt; &amp;output) const noexcept</td></tr>
+<tr class="memitem:aa5426c895a4aecb6bb19cf578ff2668f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aa5426c895a4aecb6bb19cf578ff2668f">Network</a> ()</td></tr>
+<tr class="separator:aa5426c895a4aecb6bb19cf578ff2668f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe73178ed7ab6f21426a93eb7052f75f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#afe73178ed7ab6f21426a93eb7052f75f">forward</a> (const std::vector&lt; float &gt; &amp;input, std::vector&lt; float &gt; &amp;output) const noexcept</td></tr>
 <tr class="separator:afe73178ed7ab6f21426a93eb7052f75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41fbac282289c7af4757d38e61a1314c"><td class="memItemLeft" align="right" valign="top"><a id="a41fbac282289c7af4757d38e61a1314c" name="a41fbac282289c7af4757d38e61a1314c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> () noexcept</td></tr>
+<tr class="memitem:a41fbac282289c7af4757d38e61a1314c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a41fbac282289c7af4757d38e61a1314c">update</a> () noexcept</td></tr>
 <tr class="separator:a41fbac282289c7af4757d38e61a1314c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN&gt;<br />
+class Network&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt;</div><p >A Neural <a class="el" href="class_network.html">Network</a> consisting of an input layer, multiple hidden layers and an output layer.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">SIZE_IN</td><td>Input dimensions </td></tr>
+    <tr><td class="paramname">SIZE_HIDDEN</td><td>Hidden layer dimensions </td></tr>
+    <tr><td class="paramname">SIZE_OUT</td><td>Output dimensions </td></tr>
+    <tr><td class="paramname">NUM_HIDDEN</td><td>Number of hidden layers </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa5426c895a4aecb6bb19cf578ff2668f" name="aa5426c895a4aecb6bb19cf578ff2668f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5426c895a4aecb6bb19cf578ff2668f">&#9670;&nbsp;</a></span>Network()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_network.html">Network</a>&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt;::<a class="el" href="class_network.html">Network</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Construct a <a class="el" href="class_network.html">Network</a>.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Copy/Move constructors </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe73178ed7ab6f21426a93eb7052f75f" name="afe73178ed7ab6f21426a93eb7052f75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe73178ed7ab6f21426a93eb7052f75f">&#9670;&nbsp;</a></span>forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_network.html">Network</a>&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt;::forward </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Feed forward the input through the <a class="el" href="class_network.html">Network</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input[in]</td><td>Input vector of size SIZE_IN </td></tr>
+    <tr><td class="paramname">output[out]</td><td>Preallocated vector of size SIZE_OUT to store the result in </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a41fbac282289c7af4757d38e61a1314c" name="a41fbac282289c7af4757d38e61a1314c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41fbac282289c7af4757d38e61a1314c">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t SIZE_IN, std::size_t SIZE_HIDDEN, std::size_t SIZE_OUT, std::size_t NUM_HIDDEN&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_network.html">Network</a>&lt; SIZE_IN, SIZE_HIDDEN, SIZE_OUT, NUM_HIDDEN &gt;::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Modify/Overwrite the weights </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Specify interface </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/aasoo/source/repos/GeneticEvolution/GeneticEvolution/<a class="el" href="_network_8h_source.html">Network.h</a></li>
 </ul>

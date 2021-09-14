@@ -2,8 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 
-Stage::Stage(std::size_t shipCount, unsigned genTarget)
-	: m_window(nullptr), m_ships(shipCount), m_genTarget(genTarget)
+Stage::Stage(std::size_t droneCount, unsigned genTarget)
+	: m_window(nullptr), m_drones(droneCount), m_genTarget(genTarget)
 {
 }
 

@@ -163,12 +163,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Booster.cpp" />
     <ClCompile Include="Drone.cpp" />
     <ClCompile Include="DroneController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Booster.h" />
     <ClInclude Include="Drone.h" />
     <ClInclude Include="DroneController.h" />
     <ClInclude Include="Matrix.h" />

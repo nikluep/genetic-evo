@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Genetic Drone Evolution: Stage Class Reference</title>
+<title>Genetic Evolution: Stage Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Genetic Drone Evolution
+   <div id="projectname">Genetic Evolution
    </div>
   </td>
  </tr>
@@ -68,19 +68,109 @@ $(function() {
   <div class="headertitle"><div class="title">Stage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_stage_8h_source.html">Stage.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa74f6037c108148422c6d49ae164ecf5"><td class="memItemLeft" align="right" valign="top"><a id="aa74f6037c108148422c6d49ae164ecf5" name="aa74f6037c108148422c6d49ae164ecf5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Stage</b> (std::size_t shipCount, unsigned genTarget)</td></tr>
-<tr class="separator:aa74f6037c108148422c6d49ae164ecf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94250924bbb70b1a944e5e383d18337c"><td class="memItemLeft" align="right" valign="top"><a id="a94250924bbb70b1a944e5e383d18337c" name="a94250924bbb70b1a944e5e383d18337c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memitem:a01d441e5e308e275f0e97a597c4cd2f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage.html#a01d441e5e308e275f0e97a597c4cd2f9">Stage</a> (std::size_t droneCount, unsigned genTarget)</td></tr>
+<tr class="separator:a01d441e5e308e275f0e97a597c4cd2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94250924bbb70b1a944e5e383d18337c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage.html#a94250924bbb70b1a944e5e383d18337c">init</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="separator:a94250924bbb70b1a944e5e383d18337c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516eaf8f8c7c194b62c1dd4c5cd31f90"><td class="memItemLeft" align="right" valign="top"><a id="a516eaf8f8c7c194b62c1dd4c5cd31f90" name="a516eaf8f8c7c194b62c1dd4c5cd31f90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+<tr class="memitem:a516eaf8f8c7c194b62c1dd4c5cd31f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stage.html#a516eaf8f8c7c194b62c1dd4c5cd31f90">run</a> ()</td></tr>
 <tr class="separator:a516eaf8f8c7c194b62c1dd4c5cd31f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Window <a class="el" href="class_stage.html">Stage</a> to manage the execution of the simulation. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a01d441e5e308e275f0e97a597c4cd2f9" name="a01d441e5e308e275f0e97a597c4cd2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d441e5e308e275f0e97a597c4cd2f9">&#9670;&nbsp;</a></span>Stage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stage::Stage </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>droneCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>genTarget</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Construct a <a class="el" href="class_stage.html">Stage</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">droneCount</td><td>Number of drones to simulate </td></tr>
+    <tr><td class="paramname">genTarget</td><td>Number of generations to simulate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a94250924bbb70b1a944e5e383d18337c" name="a94250924bbb70b1a944e5e383d18337c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94250924bbb70b1a944e5e383d18337c">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::init </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Initialize the <a class="el" href="class_stage.html">Stage</a> with a window to draw in.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Window</td><td>to contain the <a class="el" href="class_stage.html">Stage</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a516eaf8f8c7c194b62c1dd4c5cd31f90" name="a516eaf8f8c7c194b62c1dd4c5cd31f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516eaf8f8c7c194b62c1dd4c5cd31f90">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stage::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Execute the simulation. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/aasoo/source/repos/GeneticEvolution/GeneticEvolution/<a class="el" href="_stage_8h_source.html">Stage.h</a></li>
 <li>C:/Users/aasoo/source/repos/GeneticEvolution/GeneticEvolution/Stage.cpp</li>

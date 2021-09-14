@@ -27,6 +27,9 @@
     <ClCompile Include="DroneController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Booster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Network.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DroneController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Booster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

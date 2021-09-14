@@ -18,6 +18,8 @@ public:
 	Construct a randomly initialized Matrix.
 
 	\param randomSource A callable to produce random numbers of the desired distribution
+
+	\todo Copy/Move constructors
 	*/
 	explicit Matrix(const std::function<T()>& randomSource);
 
@@ -41,8 +43,8 @@ public:
 	/**
 	Multiply the Matrix with another vector. Requires that the dimensions match.
 
-	\param[in] vector a vector of size DIM_COL
-	\param[out] result a preallocated vector of size DIM_COL to store the result
+	\param[in] vector Vector of size DIM_COL
+	\param[out] result Preallocated vector of size DIM_COL to store the result in
 	*/
 	void mult(const std::vector<T>& vector, std::vector<T>& result) const;
 
