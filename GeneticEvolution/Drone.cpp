@@ -12,7 +12,7 @@ const sf::Vector2f BOOSTER_POS_RIGHT{ 2*BODY_RADIUS*BODY_X_SCALE, BODY_RADIUS };
 
 Drone::Drone()
 	:
-		/*m_position(), */m_velocity(), /*m_rotation(), */m_target(),
+		m_velocity(), m_target(),
 		m_body(BODY_RADIUS, BODY_RESOLUTION), m_boosterLeft(BOOSTER_POS_LEFT), m_boosterRight(BOOSTER_POS_RIGHT)
 {
 	m_body.setScale(BODY_X_SCALE, 1.f);
