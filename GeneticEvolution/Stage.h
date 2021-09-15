@@ -5,6 +5,10 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
+#include "Drone.h"
+#include "DroneController.h"
+
+
 /**
 Window Stage to manage the execution of the simulation.
 */
@@ -33,7 +37,8 @@ public:
 
 private:
 	sf::RenderWindow* m_window;
-	std::vector<void*> m_drones;
+	std::vector<Drone> m_drones;
+	std::vector<DroneController> m_controllers;
 	const unsigned m_genTarget;
 };
 

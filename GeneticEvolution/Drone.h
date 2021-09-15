@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
 
@@ -11,13 +12,13 @@
 Drone powered by two Boosters controlled by a DroneController.
 */
 class Drone
-	: public sf::Drawable
+	: public sf::Drawable, public sf::Transformable
 {
 public:	
 	/**
 	Default-construct a Drone.
 	*/
-	Drone() = default;
+	Drone();
 	
 	/**
 	Draw the Drone.
@@ -33,9 +34,11 @@ public:
 	void doPhysicsUpdate(float dt);
 
 	/**
-	Reset the Drone's entire state.
+	Reset the Drone's entire state and move to a default position.
+
+	\param position Desired initial position
 	*/
-	void reset();
+	void reset(const sf::Vector2f& position);
 
 	/**
 	Access the left Booster.
@@ -59,30 +62,21 @@ public:
 	const sf::Vector2f& getVelocity() const noexcept { return m_velocity; }
 
 	/**
-	Get the Drone's rotation.
-
-	\returns Angles from upright orientation
-	*/
-	float getRotation() const noexcept { return m_rotation; }
-
-	/**
 	Get distance to the current target location.
 
 	\returns Distance in pixel
 	*/
-	sf::Vector2f getDistanceToTarget() const noexcept { return m_position-m_target; }
+	sf::Vector2f getDistanceToTarget() const noexcept { return getPosition() - m_target; }
 
 	/**
 	Set a new target location.
 
 	\param target New target location
 	*/
-	void setTarget(const sf::Vector2f& target) noexcept { m_target = target; };
+	void setTarget(const sf::Vector2f& target) noexcept { m_target = target; }
 
 private:
-	sf::Vector2f m_position;
 	sf::Vector2f m_velocity;
-	float m_rotation;
 	sf::Vector2f m_target;
 
 	sf::CircleShape m_body;

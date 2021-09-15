@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 Stage::Stage(std::size_t droneCount, unsigned genTarget)
-	: m_window(nullptr), m_drones(droneCount), m_genTarget(genTarget)
+	: m_window(nullptr), m_drones(droneCount), m_controllers(droneCount), m_genTarget(genTarget)
 {
 }
 
@@ -14,8 +14,14 @@ void Stage::init(sf::RenderWindow& window)
 
 void Stage::run()
 {
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+
+    m_drones[0].reset({ 500.f, 500.f });
+    m_drones[0].rotate(45.f);    
+
+    m_drones[1].reset({ 700.f, 500.f });
+    m_drones[1].rotate(-15.f);
+    m_drones[1].getLeftBooster().setAngle(7.f);
+    m_drones[1].getRightBooster().setAngle(-Booster::ANGLE_BOUNDS);
 
     while (m_window->isOpen())
     {
@@ -27,7 +33,8 @@ void Stage::run()
         }
 
         m_window->clear();
-        m_window->draw(shape);
+        m_window->draw(m_drones[0]);
+        m_window->draw(m_drones[1]);
         m_window->display();
     }
 }

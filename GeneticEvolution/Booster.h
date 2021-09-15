@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/System/Vector2.hpp>
 
@@ -9,28 +10,36 @@
 A Drone's source of power.
 */
 class Booster
-	: private sf::Drawable
+	: private sf::Drawable, private sf::Transformable
 {
 	friend class Drone;
 public:
+
 	/**
-	Default-construct a Booster.
+	Maximal absolute angle the Booster can rotate from its initial position.
 	*/
-	Booster() = default;
+	static constexpr float ANGLE_BOUNDS{ 25.f };
+
+	/**
+	Construct a Booster at the specified position.
+
+	\param position Anker-point of the Booster
+	*/
+	Booster(const sf::Vector2f& position);
 
 	/**
 	Set the angle the Booster is pointing at relative to its underlying base direction.
 
 	\param angle New angle
 	*/
-	void setAngle(float angle) noexcept { m_angle = angle; };
+	void setAngle(float angle) noexcept;
 
 	/**
 	Set the Booster's power level.
 
 	\param power New power level
 	*/
-	void setPower(float power) noexcept { m_power = power; };
+	void setPower(float power) noexcept { m_power = power; }
 
 private:
 	/**
@@ -39,22 +48,10 @@ private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 	/**
-	Set the position in absolute coordinates. Intended to be used by the owning Drone.
-
-	\param position New absolute position
+	Reset the Booster's control state.
 	*/
-	void setPosition(const sf::Vector2f& position) noexcept;
+	void resetControls();
 
-	/**
-	Set the base direction based on the absolute rotation. Intended to be used by the owning Drone.
-
-	\param rotation Absolute rotation of owning Drone
-	*/
-	void setRotation(float rotation) noexcept;
-
-	float m_angle;
 	float m_power;
-	sf::Vector2f m_direction;
-
 	sf::RectangleShape m_shape;
 };
