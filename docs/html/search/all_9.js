@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reset_0',['reset',['../class_drone.html#a88ee7f0780b21e67670385a2763f0abe',1,'Drone']]],
-  ['run_1',['run',['../class_stage.html#a516eaf8f8c7c194b62c1dd4c5cd31f90',1,'Stage']]]
+  ['performactions_0',['performActions',['../class_drone_controller.html#a281f7d835fcf011f38fd04dcc72f3a73',1,'DroneController']]],
+  ['prepareactions_1',['prepareActions',['../class_drone_controller.html#aa6ed30b19acec368f0bc8bea1dd99f82',1,'DroneController']]]
 ];

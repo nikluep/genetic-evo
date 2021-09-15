@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Genetic Evolution: Booster Class Reference</title>
+<title>Genetic Drone Evolution: Booster Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Genetic Evolution
+   <div id="projectname">Genetic Drone Evolution
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_booster-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Booster Class Reference</div></div>
@@ -80,12 +81,17 @@ Inheritance diagram for Booster:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af461cd10cfc746a455c03bb13ad9960e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_booster.html#af461cd10cfc746a455c03bb13ad9960e">Booster</a> ()=default</td></tr>
-<tr class="separator:af461cd10cfc746a455c03bb13ad9960e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f64754e6508b3860207ad296f6e6d6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_booster.html#a8f64754e6508b3860207ad296f6e6d6c">Booster</a> (const sf::Vector2f &amp;position)</td></tr>
+<tr class="separator:a8f64754e6508b3860207ad296f6e6d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5049b2071144982f79c16c573db64fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_booster.html#a5049b2071144982f79c16c573db64fb4">setAngle</a> (float angle) noexcept</td></tr>
 <tr class="separator:a5049b2071144982f79c16c573db64fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89d6e8b98c629d7c1b140e026d158911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">setPower</a> (float power) noexcept</td></tr>
 <tr class="separator:a89d6e8b98c629d7c1b140e026d158911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a9fa85f86a9f3d766d0613edc3124991b"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_booster.html#a9fa85f86a9f3d766d0613edc3124991b">ANGLE_BOUNDS</a> { 25.f }</td></tr>
+<tr class="separator:a9fa85f86a9f3d766d0613edc3124991b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -96,29 +102,28 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Drone</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A <a class="el" href="class_drone.html">Drone</a>'s source of power. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af461cd10cfc746a455c03bb13ad9960e" name="af461cd10cfc746a455c03bb13ad9960e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af461cd10cfc746a455c03bb13ad9960e">&#9670;&nbsp;</a></span>Booster()</h2>
+<a id="a8f64754e6508b3860207ad296f6e6d6c" name="a8f64754e6508b3860207ad296f6e6d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f64754e6508b3860207ad296f6e6d6c">&#9670;&nbsp;</a></span>Booster()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Booster::Booster </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p >Default-construct a <a class="el" href="class_booster.html">Booster</a>. </p>
+<p >Construct a <a class="el" href="class_booster.html">Booster</a> at the specified position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Anker-point of the <a class="el" href="class_booster.html">Booster</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -142,7 +147,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Drone</b></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -186,6 +191,30 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Drone</b></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9fa85f86a9f3d766d0613edc3124991b" name="a9fa85f86a9f3d766d0613edc3124991b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa85f86a9f3d766d0613edc3124991b">&#9670;&nbsp;</a></span>ANGLE_BOUNDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float Booster::ANGLE_BOUNDS { 25.f }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Maximal absolute angle the <a class="el" href="class_booster.html">Booster</a> can rotate from its initial position. </p>
 
 </div>
 </div>

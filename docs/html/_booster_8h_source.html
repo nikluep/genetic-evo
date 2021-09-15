@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Genetic Evolution: C:/Users/aasoo/source/repos/GeneticEvolution/GeneticEvolution/Booster.h Source File</title>
+<title>Genetic Drone Evolution: C:/Users/aasoo/source/repos/GeneticEvolution/GeneticEvolution/Booster.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Genetic Evolution
+   <div id="projectname">Genetic Drone Evolution
    </div>
   </td>
  </tr>
@@ -72,40 +72,40 @@ $(function() {
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SFML/Graphics/RectangleShape.hpp&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SFML/Graphics/Transformable.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SFML/Graphics/RectangleShape.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_booster.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_booster.html">Booster</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    : <span class="keyword">private</span> sf::Drawable</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_drone.html">Drone</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_booster.html#af461cd10cfc746a455c03bb13ad9960e">   19</a></span>    <a class="code hl_function" href="class_booster.html#af461cd10cfc746a455c03bb13ad9960e">Booster</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_booster.html#a5049b2071144982f79c16c573db64fb4">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_booster.html#a5049b2071144982f79c16c573db64fb4">setAngle</a>(<span class="keywordtype">float</span> angle) <span class="keyword">noexcept</span> { m_angle = angle; };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">setPower</a>(<span class="keywordtype">float</span> power) <span class="keyword">noexcept</span> { m_power = power; };</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_drone.html#af1680c17484f740688c62782fab299c0">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> setPosition(<span class="keyword">const</span> sf::Vector2f&amp; position) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> setRotation(<span class="keywordtype">float</span> rotation) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_booster.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_booster.html">Booster</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    : <span class="keyword">private</span> sf::Drawable, <span class="keyword">private</span> sf::Transformable</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_drone.html">Drone</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_booster.html#a9fa85f86a9f3d766d0613edc3124991b">   21</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_booster.html#a9fa85f86a9f3d766d0613edc3124991b">ANGLE_BOUNDS</a>{ 25.f };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_booster.html#a8f64754e6508b3860207ad296f6e6d6c">Booster</a>(<span class="keyword">const</span> sf::Vector2f&amp; position);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_booster.html#a5049b2071144982f79c16c573db64fb4">setAngle</a>(<span class="keywordtype">float</span> angle) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">setPower</a>(<span class="keywordtype">float</span> power) <span class="keyword">noexcept</span> { m_power = power; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_drone.html#af1680c17484f740688c62782fab299c0">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> resetControls();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">float</span> m_angle;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">float</span> m_power;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    sf::Vector2f m_direction;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    sf::RectangleShape m_shape;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
-<div class="ttc" id="aclass_booster_html"><div class="ttname"><a href="class_booster.html">Booster</a></div><div class="ttdef"><b>Definition:</b> Booster.h:13</div></div>
-<div class="ttc" id="aclass_booster_html_a5049b2071144982f79c16c573db64fb4"><div class="ttname"><a href="class_booster.html#a5049b2071144982f79c16c573db64fb4">Booster::setAngle</a></div><div class="ttdeci">void setAngle(float angle) noexcept</div><div class="ttdef"><b>Definition:</b> Booster.h:26</div></div>
-<div class="ttc" id="aclass_booster_html_a89d6e8b98c629d7c1b140e026d158911"><div class="ttname"><a href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">Booster::setPower</a></div><div class="ttdeci">void setPower(float power) noexcept</div><div class="ttdef"><b>Definition:</b> Booster.h:33</div></div>
-<div class="ttc" id="aclass_booster_html_af461cd10cfc746a455c03bb13ad9960e"><div class="ttname"><a href="class_booster.html#af461cd10cfc746a455c03bb13ad9960e">Booster::Booster</a></div><div class="ttdeci">Booster()=default</div></div>
-<div class="ttc" id="aclass_drone_html"><div class="ttname"><a href="class_drone.html">Drone</a></div><div class="ttdef"><b>Definition:</b> Drone.h:15</div></div>
-<div class="ttc" id="aclass_drone_html_af1680c17484f740688c62782fab299c0"><div class="ttname"><a href="class_drone.html#af1680c17484f740688c62782fab299c0">Drone::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const override</div><div class="ttdef"><b>Definition:</b> Drone.cpp:3</div></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">float</span> m_power;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    sf::RectangleShape m_shape;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="ttc" id="aclass_booster_html"><div class="ttname"><a href="class_booster.html">Booster</a></div><div class="ttdef"><b>Definition:</b> Booster.h:14</div></div>
+<div class="ttc" id="aclass_booster_html_a5049b2071144982f79c16c573db64fb4"><div class="ttname"><a href="class_booster.html#a5049b2071144982f79c16c573db64fb4">Booster::setAngle</a></div><div class="ttdeci">void setAngle(float angle) noexcept</div><div class="ttdef"><b>Definition:</b> Booster.cpp:20</div></div>
+<div class="ttc" id="aclass_booster_html_a89d6e8b98c629d7c1b140e026d158911"><div class="ttname"><a href="class_booster.html#a89d6e8b98c629d7c1b140e026d158911">Booster::setPower</a></div><div class="ttdeci">void setPower(float power) noexcept</div><div class="ttdef"><b>Definition:</b> Booster.h:42</div></div>
+<div class="ttc" id="aclass_booster_html_a8f64754e6508b3860207ad296f6e6d6c"><div class="ttname"><a href="class_booster.html#a8f64754e6508b3860207ad296f6e6d6c">Booster::Booster</a></div><div class="ttdeci">Booster(const sf::Vector2f &amp;position)</div><div class="ttdef"><b>Definition:</b> Booster.cpp:12</div></div>
+<div class="ttc" id="aclass_booster_html_a9fa85f86a9f3d766d0613edc3124991b"><div class="ttname"><a href="class_booster.html#a9fa85f86a9f3d766d0613edc3124991b">Booster::ANGLE_BOUNDS</a></div><div class="ttdeci">static constexpr float ANGLE_BOUNDS</div><div class="ttdef"><b>Definition:</b> Booster.h:21</div></div>
+<div class="ttc" id="aclass_drone_html"><div class="ttname"><a href="class_drone.html">Drone</a></div><div class="ttdef"><b>Definition:</b> Drone.h:16</div></div>
+<div class="ttc" id="aclass_drone_html_af1680c17484f740688c62782fab299c0"><div class="ttname"><a href="class_drone.html#af1680c17484f740688c62782fab299c0">Drone::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const override</div><div class="ttdef"><b>Definition:</b> Drone.cpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

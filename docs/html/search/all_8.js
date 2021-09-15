@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['performactions_0',['performActions',['../class_drone_controller.html#a281f7d835fcf011f38fd04dcc72f3a73',1,'DroneController']]],
-  ['prepareactions_1',['prepareActions',['../class_drone_controller.html#aa6ed30b19acec368f0bc8bea1dd99f82',1,'DroneController']]]
+  ['operator_5b_5d_0',['operator[]',['../class_matrix.html#ad3ea91f795753bdb229edb199fc1ac1a',1,'Matrix::operator[](std::size_t index) const'],['../class_matrix.html#a971ad628b8ed1cc136ff7ad82940caca',1,'Matrix::operator[](std::size_t index)']]]
 ];
