@@ -39,7 +39,7 @@ public:
 
 	\param power New power level
 	*/
-	void setPower(float power) noexcept { m_power = power; }
+	void setPower(float power) noexcept;
 
 private:
 	/**
@@ -51,6 +51,13 @@ private:
 	Reset the Booster's control state.
 	*/
 	void resetControls();
+
+	/**
+	Get the Booster's force output
+
+	\returns Vector of force in pixels / seconds^2
+	*/
+	sf::Vector2f getForce() const;
 
 	float m_power;
 	sf::RectangleShape m_shape;
