@@ -10,8 +10,8 @@ const sf::Vector2f SIZE{ 10.f, 45.f };
 const sf::Color BASE_COLOR{ 0, 0, 255, 255 };
 
 // booster physics config
-const sf::Vector2f UNIT_DOWN{ 0.f, -1.f };
-constexpr auto FULL_POWER = 12.f / 50; // pixels/seconds^2
+const sf::Vector2f UNIT_UP{ 0.f, -1.f };
+constexpr auto FULL_POWER = 9.81f * 100.f * 1.8f; // pixels/seconds^2, overshooting gravity by 80% (each!)
 
 Booster::Booster(const sf::Vector2f& position)
 	: m_power(), m_shape(SIZE)
@@ -45,6 +45,8 @@ void Booster::resetControls()
 
 sf::Vector2f Booster::getForce() const
 {
-	// unit vector times power output
-	return getTransform() * UNIT_DOWN * m_power * FULL_POWER;
+	// force = unit vector times power output
+	// note that the transform includes translation, so transforming a point does not equal transforming a direction
+	const auto direction = getTransform() * UNIT_UP - getTransform() * sf::Vector2f{ 0.f, 0.f };
+	return direction * m_power * FULL_POWER;
 }

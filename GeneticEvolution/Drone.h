@@ -30,9 +30,9 @@ public:
 	/**
 	Calculate new state based on actions during the last tick.
 
-	\param dt Duration of the last tick in ms.
+	\param dt Duration of the last tick in s.
 	*/
-	void doPhysicsUpdate(std::chrono::duration<float, std::milli> dt);
+	void doPhysicsUpdate(std::chrono::duration<float> dt);
 
 	/**
 	Reset the Drone's entire state and move to a default position.

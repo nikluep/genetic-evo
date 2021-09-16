@@ -1,15 +1,18 @@
 #include "Stage.h"
 
 #include <cmath>
+#include <thread>
 
 #include <SFML/Graphics.hpp>
 
-#include <random>
+#include "random.h"
 
 
 constexpr auto TARGET_SIZE = 2.5f;
 constexpr auto TARGET_SIZE_SQRD = TARGET_SIZE*TARGET_SIZE;
 
+using namespace std::chrono_literals;
+constexpr auto TARGET_FRAMETIME = 1s / 120;
 
 Stage::Stage(std::size_t droneCount, unsigned generationTarget)
 	: 
@@ -58,6 +61,9 @@ void Stage::run()
             controller.act();
         }
 
+        // stable fps
+        vsync(frameStart);
+
         // physics
         auto frameEnd = std::chrono::system_clock::now();
         for (auto& drone : m_drones) {
@@ -78,6 +84,8 @@ bool Stage::handleEvents()
 {
     sf::Event event;
     while (m_window->pollEvent(event)) {
+
+        // window closed
         if (event.type == sf::Event::Closed) {
             return false;
         }
@@ -93,6 +101,8 @@ void Stage::checkTargetProgress()
 
     for (auto& drone : m_drones) {
         const auto targetDistance = drone.getDistanceToTarget();
+
+        // increase score when target is reached
         if (std::abs(magnitudeSqrd(targetDistance)) < TARGET_SIZE_SQRD) {
 
             drone.score();
@@ -104,6 +114,15 @@ void Stage::checkTargetProgress()
 sf::Vector2f Stage::getRandomTarget() const
 {
     return { getRandomFloat() * m_window->getSize().x, getRandomFloat() * m_window->getSize().y };
+}
+
+void Stage::vsync(std::chrono::time_point<std::chrono::system_clock> frameStart) const
+{
+    const auto frameTime = std::chrono::system_clock::now() - frameStart;
+    const auto sleepTime = TARGET_FRAMETIME - frameTime;
+    if (sleepTime.count() > 0) {
+        std::this_thread::sleep_for(sleepTime);
+    }
 }
 
 

@@ -2,7 +2,7 @@
 
 // generation config
 using namespace std::chrono_literals;
-constexpr auto TIME_PER_GENERATION = 30ms;
+constexpr auto TIME_PER_GENERATION = 3s;
 
 Optimizer::Optimizer(std::vector<DroneController>& controllers, unsigned generationTarget) noexcept
     : m_controllers(controllers), m_generation(), m_generationTarget(generationTarget), m_generationStart()

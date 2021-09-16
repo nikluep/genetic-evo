@@ -60,6 +60,13 @@ private:
 	*/
 	sf::Vector2f getRandomTarget() const;
 
+	/**
+	Ensure a stable framerate.
+
+	\param frameStart Starttime of the current frame
+	*/
+	void vsync(std::chrono::time_point<std::chrono::system_clock> frameStart) const;
+
 
 	sf::RenderWindow* m_window;
 
