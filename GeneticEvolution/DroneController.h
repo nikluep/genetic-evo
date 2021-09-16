@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "Network.h"
+#include "Drone.h"
 
 /*
 Specify the Network's dimensions
@@ -21,25 +22,27 @@ public:
 	/**
 	Default-construct a DroneController.
 	*/
-	DroneController() = default;
+	DroneController(Drone& drone);
 
 	/**
-	Pre-analyze a Drone's state to decide what to do and save the decision for later execution.
+	Analyze a Drone's state to decide what to do .
 	*/
-	void prepareActions();
-
-	/**
-	Execute the previously prepared actions.
-	*/
-	void performActions();
+	void act();
 
 	/**
 	Update the underlying Neural Network.
 	*/
 	void updateNetwork();
 
+	/**
+	Get the controlled drone.
+
+	\returns Drone that is controlled
+	*/
+	const Drone& getDrone() const { return m_drone; }
+
 private:
 	Network<NETWORK_INPUT_DIM, NETWORK_HIDDEN_DIM, NETWORK_OUTPUT_DIM, NETWORK_HIDDEN_COUNT> m_network;
-	std::vector<float> m_actions;
+	Drone& m_drone;
 };
 

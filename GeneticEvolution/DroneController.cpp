@@ -1,10 +1,11 @@
 #include "DroneController.h"
 
-void DroneController::prepareActions()
+DroneController::DroneController(Drone& drone)
+	: m_drone(drone)
 {
 }
 
-void DroneController::performActions()
+void DroneController::act()
 {
 }
 
