@@ -1,5 +1,7 @@
 #pragma once
 
+#include <chrono>
+
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/Vector2.hpp>
@@ -29,9 +31,8 @@ public:
 	Calculate new state based on actions during the last tick.
 
 	\param dt Duration of the last tick in ms.
-	\todo switch to standard's time utils.
 	*/
-	void doPhysicsUpdate(float dt);
+	void doPhysicsUpdate(std::chrono::duration<float, std::milli> dt);
 
 	/**
 	Reset the Drone's entire state and move to a default position.
@@ -75,9 +76,24 @@ public:
 	*/
 	void setTarget(const sf::Vector2f& target) noexcept { m_target = target; }
 
+	/**
+	Add a point.
+	*/
+	void score() { ++m_score; }
+
+	/**
+	Get the Controller's score.
+
+	\returns Current score
+	*/
+	unsigned getScore() const { return m_score; }
+
 private:
 	sf::Vector2f m_velocity;
+	float m_angularVelocity;
+
 	sf::Vector2f m_target;
+	unsigned m_score;
 
 	sf::CircleShape m_body;
 	Booster m_boosterLeft;
