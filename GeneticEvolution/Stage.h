@@ -2,11 +2,13 @@
 
 #include <cstddef>
 #include <vector>
+#include <chrono>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "Drone.h"
 #include "DroneController.h"
+#include "Optimizer.h"
 
 
 /**
@@ -21,7 +23,7 @@ public:
 	\param droneCount Number of drones to simulate
 	\param genTarget Number of generations to simulate
 	*/
-	explicit Stage(std::size_t droneCount, unsigned genTarget);
+	explicit Stage(std::size_t droneCount, unsigned generationTarget);
 
 	/**
 	Initialize the Stage with a window to draw in.
@@ -36,9 +38,33 @@ public:
 	void run();
 
 private:
+
+	/**
+	Handle all types of keyboard, mouse and other input.
+
+	\returns Signals if the main loop should continue
+	*/
+	bool handleEvents();
+
+	/**
+	Check if any drones reached their target.
+	*/
+	void checkTargetProgress();
+
+	/**
+	Create a random target
+
+	\returns a random target inside the window
+
+	\todo implement
+	*/
+	sf::Vector2f getRandomTarget() const;
+
+
 	sf::RenderWindow* m_window;
+
 	std::vector<Drone> m_drones;
 	std::vector<DroneController> m_controllers;
-	const unsigned m_genTarget;
+	Optimizer m_optimizer;
 };
 
